@@ -46,5 +46,14 @@ public class TrianglesTest {
         MatcherAssert.assertThat(triangleType, is("Scalene"));
     }
 
+    @Test
+
+    public void thisIsARightTriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean triangleType = underTest.pythagoreanTriangleTester();
+        Tester(5,  12, 13);
+        MatcherAssert.assertThat(triangleType, is(true));
+    }
+
 
 }

@@ -17,4 +17,7 @@ public class TriangleSorter {
 
     }
 
+    public boolean pythagoreanTriangleTester(int sideA, int sideB, int sideB) {
+        double sumOfTwoSquares = (Math.pow(a, 2) + Math.pow(b, 2));
+    }
 }
