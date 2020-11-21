@@ -39,7 +39,12 @@ public class TrianglesTest {
         MatcherAssert.assertThat(triangleType, is("Scalene"));
     }
 
-
+    @Test
+    public void noSidesEqualIsScaleneTriangleSecondTest() {
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(4, 8, 12);
+        MatcherAssert.assertThat(triangleType, is("Scalene"));
+    }
 
 
 }
