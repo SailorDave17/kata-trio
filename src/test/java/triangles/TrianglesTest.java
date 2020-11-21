@@ -21,4 +21,14 @@ public class TrianglesTest {
         assertThat(triangleType).isEqualTo("Isosceles");
 
     }
+
+    @Test
+    public void twoSidesIsAnIsoscelesTriangleSecondTest(){
+        TriangleSorter underTest = new TriangleSorter();
+        String triangleType = underTest.analyze(10,7,10);
+        assertThat(triangleType).isEqualTo("Isosceles");
+
+    }
+
+
 }
