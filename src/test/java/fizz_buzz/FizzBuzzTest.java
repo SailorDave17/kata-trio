@@ -36,10 +36,10 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void sevenShouldReturnQix() {
+    public void sevenShouldReturnBang() {
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(7);
-        assertThat(spokenWord).isEqualTo("Qix");
+        String spokenWord = underTest.say(11);
+        assertThat(spokenWord).isEqualTo("Bang");
 
     }
 

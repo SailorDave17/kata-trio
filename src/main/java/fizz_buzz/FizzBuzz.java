@@ -14,8 +14,8 @@ public class FizzBuzz {
         if(number % 5 ==0){
             return "Buzz";
         }
-        if(number % 7 == 0){
-            return "Qix";
+        if(number % 11 == 0){
+            return "Bang";
         }
 
 
