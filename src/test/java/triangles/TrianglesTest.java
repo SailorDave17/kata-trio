@@ -54,5 +54,13 @@ public class TrianglesTest {
         MatcherAssert.assertThat(triangleType, is(true));
     }
 
+    @Test
+
+    public void thisIsARightTriangleSecondTest() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean triangleType = underTest.TriangleTester(4, 3, 5);
+        MatcherAssert.assertThat(triangleType, is(true));
+    }
+
 
 }

@@ -19,6 +19,9 @@ public class TriangleSorter {
 
     public boolean TriangleTester(int sideA, int sideB, int sideC) {
         double sumOfTwoSquares = (Math.pow(sideA, 2) + Math.pow(sideB, 2));
-        return true;
+        if (Math.pow(sumOfTwoSquares, 0.5) == sideC)
+            return true;
+        else
+            return false;
     }
 }
