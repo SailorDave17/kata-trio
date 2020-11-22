@@ -50,16 +50,24 @@ public class TrianglesTest {
 
     public void thisIsARightTriangle() {
         TriangleSorter underTest = new TriangleSorter();
-        boolean triangleType = underTest.TriangleTester(5, 12, 13);
-        MatcherAssert.assertThat(triangleType, is(true));
+        boolean triangleType = underTest.triangleTester(5, 12, 13);
+        assertThat(triangleType).isEqualTo(true);
     }
 
     @Test
 
     public void thisIsARightTriangleSecondTest() {
         TriangleSorter underTest = new TriangleSorter();
-        boolean triangleType = underTest.TriangleTester(4, 3, 5);
-        MatcherAssert.assertThat(triangleType, is(true));
+        boolean triangleType = underTest.triangleTester(4, 3, 5);
+       assertThat(triangleType).isEqualTo(true);
+    }
+
+    @Test
+
+    public void thisIsATriangle() {
+        TriangleSorter underTest = new TriangleSorter();
+        boolean triangleType = underTest.triangleChecker(1, 1, 5);
+        assertThat(triangleType).isEqualTo (false);
     }
 
 

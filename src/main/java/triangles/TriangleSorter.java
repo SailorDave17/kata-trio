@@ -17,11 +17,18 @@ public class TriangleSorter {
 
     }
 
-    public boolean TriangleTester(int sideA, int sideB, int sideC) {
+    public boolean triangleTester(int sideA, int sideB, int sideC) {
         double sumOfTwoSquares = (Math.pow(sideA, 2) + Math.pow(sideB, 2));
         if (Math.pow(sumOfTwoSquares, 0.5) == sideC)
             return true;
         else
             return false;
+    }
+
+    public boolean triangleChecker(int sideA, int sideB, int sideC){
+        if (sideA + sideB > sideC){
+                return true;}
+        else{
+            return false;}
     }
 }
