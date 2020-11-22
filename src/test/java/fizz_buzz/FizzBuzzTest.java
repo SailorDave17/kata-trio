@@ -20,4 +20,11 @@ public class FizzBuzzTest {
         String spokenWord = underTest.say(1);
         assertThat(spokenWord).isEqualTo("1");
     }
+
+    @Test
+    public void threeShouldReturnFizz() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(3);
+        assertThat(spokenWord).isEqualTo("Fizz");
+    }
 }
