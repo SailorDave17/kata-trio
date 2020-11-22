@@ -36,22 +36,21 @@ public class TrianglesTest {
     public void noSidesEqualIsScaleneTriangle() {
         TriangleSorter underTest = new TriangleSorter();
         String triangleType = underTest.analyze(1, 2, 3);
-        MatcherAssert.assertThat(triangleType, is("Scalene"));
+        assertThat(triangleType).isEqualTo("Scalene");
     }
 
     @Test
     public void noSidesEqualIsScaleneTriangleSecondTest() {
         TriangleSorter underTest = new TriangleSorter();
         String triangleType = underTest.analyze(4, 8, 12);
-        MatcherAssert.assertThat(triangleType, is("Scalene"));
+        assertThat(triangleType).isEqualTo("Scalene");
     }
 
     @Test
 
     public void thisIsARightTriangle() {
         TriangleSorter underTest = new TriangleSorter();
-        boolean triangleType = underTest.pythagoreanTriangleTester();
-        Tester(5,  12, 13);
+        boolean triangleType = underTest.TriangleTester(5, 12, 13);
         MatcherAssert.assertThat(triangleType, is(true));
     }
 
