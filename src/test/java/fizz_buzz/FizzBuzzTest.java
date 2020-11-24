@@ -51,4 +51,13 @@ public class FizzBuzzTest {
 
 
     }
+
+    @Test
+    public void fifteenShouldReturnFizBuzzBang() {
+        FizzBuzz underTest = new FizzBuzz();
+        String spokenWord = underTest.say(220);
+        assertThat(spokenWord).isEqualTo("FizzBuzzBang");
+
+
+    }
 }
