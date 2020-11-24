@@ -7,13 +7,14 @@ public class WageCalculator {
         }
         if (startingHour < bedtime) {
             return 12;
-        }
-        else if (startingHour >= bedtime && startingHour <24){
+        } else if (startingHour >= bedtime && startingHour < 24) {
             return 8;
+        } else if (startingHour >= 24) {
+            return 16;
         }
 
         return 0;
+
     }
 }
-
 
