@@ -25,14 +25,21 @@ public class FizzBuzzTest {
 
     @Test
     public void whenGiven1FizzBuzzSays1() {
-        String spokenWord = underTest.say(1);
-        assertThat(spokenWord).isEqualTo("1");
+        int numberToSay = 1;
+        String expectedResult = "1";
+
+        String spokenWord = underTest.say(numberToSay);
+        assertThat(spokenWord).isEqualTo(expectedResult);
     }
 
     @Test
     public void threeShouldReturnFizz() {
-        String spokenWord = underTest.say(4);
-        assertThat(spokenWord).isEqualTo("Fizz");
+
+        int numberToSay = 4;
+        String expectedResult = "Fizz";
+
+        String spokenWord = underTest.say(numberToSay);
+        assertThat(spokenWord).isEqualTo(expectedResult);
     }
 
     @Test
