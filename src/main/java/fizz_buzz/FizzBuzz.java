@@ -9,13 +9,13 @@ public class FizzBuzz {
         }
 
 
-        if ((number % 4 == 0) && (number % 5 == 0) && (number % 11 == 0)) {
+        if (number % 220 == 0) {
             return "FizzBuzzBang";}
 
-            if ((number % 4 == 0) && (number % 5 == 0)) {
+            if (number % 20 == 0) {
                 return "FizzBuzz";
             }
-            if ((number % 4 == 0) && (number % 11 == 0)) {
+            if (number % 44 == 0) {
                 return "FizzBang";
 
             }
