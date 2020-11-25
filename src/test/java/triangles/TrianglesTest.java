@@ -17,36 +17,40 @@ public class TrianglesTest {
         underTest = new TriangleSorter();
     }
 
+    private void assertTriangleSorter(String triangleType, String kindOfTriangle) {
+        assertThat(triangleType).isEqualTo(kindOfTriangle);
+    }
+
     @Test
     public void threeEqualSidesIsAnEquilateralTriangle() {
         String triangleType = underTest.analyze(3, 3, 3);
-        assertThat(triangleType).isEqualTo("Equilateral");
+        assertTriangleSorter(triangleType, "Equilateral");
     }
 
     @Test
     public void twoSidesIsAnIsoscelesTriangle() {
         String triangleType = underTest.analyze(3, 5, 3);
-        assertThat(triangleType).isEqualTo("Isosceles");
+        assertTriangleSorter(triangleType, "Isosceles");
 
     }
 
     @Test
     public void twoSidesIsAnIsoscelesTriangleSecondTest() {
         String triangleType = underTest.analyze(10, 7, 10);
-        assertThat(triangleType).isEqualTo("Isosceles");
+        assertTriangleSorter(triangleType, "Isosceles");
 
     }
 
     @Test
     public void noSidesEqualIsScaleneTriangle() {
         String triangleType = underTest.analyze(1, 2, 3);
-        assertThat(triangleType).isEqualTo("Scalene");
+        assertTriangleSorter(triangleType, "Scalene");
     }
 
     @Test
     public void noSidesEqualIsScaleneTriangleSecondTest() {
         String triangleType = underTest.analyze(4, 8, 12);
-        assertThat(triangleType).isEqualTo("Scalene");
+        assertTriangleSorter(triangleType, "Scalene");
     }
 
     @Test

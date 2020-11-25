@@ -17,6 +17,8 @@ public class BabySitterTest {
 
     @Test
     public void oneHourPreBedTimeShouldPay12() {
+
+
         int wage = underTest.calculateShiftWage(17, 18, 20);
         assertThat(wage).isEqualTo(12);
     }
