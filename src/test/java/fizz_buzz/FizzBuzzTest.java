@@ -1,5 +1,6 @@
 package fizz_buzz;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,30 +15,34 @@ import static org.assertj.core.api.Assertions.assertThat;
  * -When the integer passed is a multiple of 5, the method should say Buzz.
  */
 public class FizzBuzzTest {
+
+    private FizzBuzz underTest;
+
+    @BeforeEach
+    void setUp() {
+        underTest = new FizzBuzz();
+    }
+
     @Test
     public void whenGiven1FizzBuzzSays1() {
-        FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(1);
         assertThat(spokenWord).isEqualTo("1");
     }
 
     @Test
     public void threeShouldReturnFizz() {
-        FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(4);
         assertThat(spokenWord).isEqualTo("Fizz");
     }
 
     @Test
     public void fiveShouldReturnBuzz(){
-        FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(5);
         assertThat(spokenWord).isEqualTo("Buzz");
     }
 
     @Test
     public void sevenShouldReturnBang() {
-        FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(11);
         assertThat(spokenWord).isEqualTo("Bang");
 
@@ -45,7 +50,6 @@ public class FizzBuzzTest {
 
     @Test
     public void fifteenShouldReturnFizBang() {
-        FizzBuzz underTest = new FizzBuzz();
         String spokenWord = underTest.say(44);
         assertThat(spokenWord).isEqualTo("FizzBang");
 
