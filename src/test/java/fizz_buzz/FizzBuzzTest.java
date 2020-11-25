@@ -23,59 +23,48 @@ public class FizzBuzzTest {
         underTest = new FizzBuzz();
     }
 
-    @Test
-    public void whenGiven1FizzBuzzSays1() {
-        int numberToSay = 1;
-        String expectedResult = "1";
-
+    public void assertFizzBuzz(int numberToSay, String expectedResult) {
         String spokenWord = underTest.say(numberToSay);
         assertThat(spokenWord).isEqualTo(expectedResult);
     }
 
     @Test
-    public void threeShouldReturnFizz() {
+    public void whenGiven1FizzBuzzSays1() {
+        assertFizzBuzz(1, "1");
+    }
 
-        int numberToSay = 4;
-        String expectedResult = "Fizz";
-
-        String spokenWord = underTest.say(numberToSay);
-        assertThat(spokenWord).isEqualTo(expectedResult);
+    @Test
+    public void fourShouldReturnFizz() {
+        assertFizzBuzz(4, "Fizz");
     }
 
     @Test
     public void fiveShouldReturnBuzz(){
-        String spokenWord = underTest.say(5);
-        assertThat(spokenWord).isEqualTo("Buzz");
+        assertFizzBuzz(5, "Buzz");
     }
 
     @Test
-    public void sevenShouldReturnBang() {
-        String spokenWord = underTest.say(11);
-        assertThat(spokenWord).isEqualTo("Bang");
-
+    public void elevenShouldReturnBang() {
+        assertFizzBuzz(11, "Bang");
     }
 
     @Test
-    public void fifteenShouldReturnFizBang() {
-        String spokenWord = underTest.say(44);
-        assertThat(spokenWord).isEqualTo("FizzBang");
-
-
+    public void fortyFourShouldReturnFizBang() {
+        assertFizzBuzz(44, "FizzBang");
     }
 
     @Test
-    public void fifteenShouldReturnFizBuzzBang() {
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(220);
-        assertThat(spokenWord).isEqualTo("FizzBuzzBang");
-
-
+    public void twoHundredAndTwentyShouldReturnFizBuzzBang() {
+        assertFizzBuzz(220, "FizzBuzzBang");
     }
 
     @Test
     public void negativeNumberShouldReturnPositiveNumberMessage(){
-        FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(-54654);
-        assertThat(spokenWord).isEqualTo("You said a negative number. Say a positive number, please!");
+        assertFizzBuzz(-54654, "You said a negative number. Say a positive number, please!");
+    }
+
+    @Test
+    public void twoShouldReturnTwo(){
+        assertFizzBuzz(2, "2");
     }
 }
