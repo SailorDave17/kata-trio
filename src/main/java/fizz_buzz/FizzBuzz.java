@@ -5,7 +5,7 @@ public class FizzBuzz {
     public String say(Integer number) {
 
         if (number < 0){
-            return "Say a positive number, please!";
+            return "You said a negative number. Say a positive number, please!";
         }
 
 

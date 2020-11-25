@@ -64,7 +64,7 @@ public class FizzBuzzTest {
     @Test
     public void negativeNumberShouldReturnPositiveNumberMessage(){
         FizzBuzz underTest = new FizzBuzz();
-        String spokenWord = underTest.say(-5);
-        assertThat(spokenWord).isEqualTo("Say a positive number, please!");
+        String spokenWord = underTest.say(-54654);
+        assertThat(spokenWord).isEqualTo("You said a negative number. Say a positive number, please!");
     }
 }
